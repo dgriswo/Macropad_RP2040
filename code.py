@@ -51,6 +51,7 @@ display_bus = displayio.FourWire(
     baudrate=1000000,
 )
 display = SH1106(display_bus, width=OLED_WIDTH, height=OLED_HEIGHT)
+display.auto_refresh = False
 
 # setup the keypad
 key_pins = (
@@ -90,8 +91,9 @@ def update_text():
     # Updates the display text from key_maps
     text_area.text = key_maps[key_maps_index]["Name"]
     # Iterate through the variables and descriptions. i.e. text_area1, text_area2, etc
-    for i in range(1, 12):
-        globals()[f"text_area{i}"].text = key_maps[key_maps_index][i - 1][1][0:6]
+    for i in range(0, 12):
+        globals()[f"text_area{i+1}"].text = key_maps[key_maps_index][i][1][0:6]
+    display.refresh()
 
 
 def colorwheel(pos):
@@ -200,6 +202,7 @@ while True:
 
         if encoder.position < last_position and button.value == False:
             # encoder was pushed before rotation.  Change keymap, not volume
+            print("changing keymap")
             last_position = encoder.position
             key_maps_index -= 1
             if key_maps_index < 1:
