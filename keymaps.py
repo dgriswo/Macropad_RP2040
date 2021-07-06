@@ -76,4 +76,19 @@ key_maps = {
         10: (Keycode.DELETE, "Del"),
         11: (Keycode.ENTER, "Enter"),
     },
+    6: {
+        "Name": "Rick Roll",
+        0: ("Never gonna give you up\n","1"),
+        1: ("Never gonna let you down\n","2"),
+        2: ("Never gonna run around and desert you\n","3"),
+        3: ("Never gonna make you cry\n","4"),
+        4: ("Never gonna say goodbye\n","5"),
+        5: ("Never gonna tell a lie and hurt you\n","6"),
+        6: ("https://www.youtube.com/watch?v=dQw4w9WgXcQ\n","YouTube"),
+        7: ("", ""),
+        8: ("", ""),
+        9: ("", ""),
+        10: ("", ""),
+        11: ("", ""),    
+    }
 }
