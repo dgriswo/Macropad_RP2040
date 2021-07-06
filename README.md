@@ -13,9 +13,9 @@ Designed for use with Adafruit's Macropad RP2040: https://www.adafruit.com/produ
 
 ## Mulitple keymaps
 
-Multiple key maps are stored in keymaps.py as Python dictionaries containing tuples of (macro,description).  Either string, Keycodes, or lists of Keycodes are supported.
+Multiple key maps are stored in keymaps.py as Python dictionaries containing tuples of (macro,description).  Either string, Keycodes, or lists of Keycodes are supported.  Even if there is no macro or name for a given key, a blank entry needs to exist for proper parsing.
 
-Even if there is no macro or name for a given key, a blank entry needs to exist for proper parsing.
+The keymaps can be cycled through by holding down the rotary encoder while turning.  The display will update with the name of the current keymap and the key descriptions
 
 ## Images
 
